@@ -2,8 +2,8 @@
 
 Tech Lead / Senior Backend Developer
 
-telegram: @vytvyt
-email: vitaly.ostanin@mail.ru
+telegram: @vytvyt\
+email: vitaly.ostanin@mail.ru\
 github: https://github.com/VitalyOstanin/
 
 Дата рождения: 24 октября 1979.\
