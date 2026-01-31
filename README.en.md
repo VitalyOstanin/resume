@@ -14,9 +14,18 @@ Remote work only
 1. Senior Backend Developer (Node.js);
 2. Tech Lead.
 
+## Notable Open Source Projects
+- **MCP Servers Ecosystem**: Created multiple Model Context Protocol servers for AI integration:
+  - **YouTrack MCP Server**: Comprehensive issue management and reporting integration
+  - **MongoDB MCP Server**: Full-featured database integration with safety modes
+  - **PostgreSQL MCP Server**: Database operations and schema analysis
+  - **Chrome Debugger Protocol MCP**: Advanced Node.js debugging through DevTools
+- **Markdown Org Extract**: Rust-based tool for organizing Markdown content inspired by Org Mode philosophy
+
 ## Executive summary
 25+ years in IT with 13+ years of Node.js expertise.\
 Specialization: microservices architecture and development, enterprise systems integration, task and event queues, database design and optimization, high-load services.\
+**AI Integration Expert**: Advanced experience with AI agents (Anthropic Claude, OpenAI, Qwen, DeepSeek), practical implementation in development and testing workflows, extensive team training on AI adoption.\
 Team leadership, mentoring, development process organization, incident analysis and continuous improvement.\
 Hands-on Node.js development focused on API design, resilient queues, and service observability.
 
@@ -26,7 +35,12 @@ Hands-on Node.js development focused on API design, resilient queues, and servic
 1. Period: June 2024 — Present;
 2. Industry: Finance;
 3. Role: Tech Lead / Senior Backend Developer;
-4. Key responsibilities and achievements: System architecture design, team leadership, microservices development.
+4. Key responsibilities and achievements: 
+   - System architecture design and team leadership
+   - **AI Integration Leadership**: Implemented AI agents for automated development and testing workflows
+   - **Team AI Training**: Conducted comprehensive training programs on practical AI adoption for development teams
+   - Advanced usage of multiple AI models (Anthropic Claude, OpenAI, Qwen, DeepSeek) in production environments
+   - Microservices development and enterprise system integration
 
 ### Digital Technologies and Platforms — Lead Expert
 1. Period: November 2022 — April 2024 (1 year 6 months);
@@ -119,8 +133,9 @@ Hands-on Node.js development focused on API design, resilient queues, and servic
 2. Databases: MongoDB, PostgreSQL, Redis;
 3. Integration and queues: RabbitMQ, pg-boss;
 4. Observability: ELK, Grafana, Loki, Sentry;
-5. AI integration: Advanced usage of AI agent APIs;
-6. Team collaboration: colleague training, code review, knowledge sharing.
+5. **AI Integration**: Advanced usage of AI agent APIs (Anthropic Claude, OpenAI, Qwen, DeepSeek);
+6. **AI Agents**: Practical application in development and testing workflows, team training on AI adoption;
+7. Team collaboration: colleague training, code review, knowledge sharing.
 
 ## Additional information
 Experienced professional with broad expertise: Node.js, databases, TCP/IP networking understanding, distributed systems interaction, task and event processing.\
