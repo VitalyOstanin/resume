@@ -3,120 +3,137 @@
 Tech Lead / Senior Backend Developer
 
 telegram: @vytvyt\
-email: vitaly.ostanin@mail.ru\
+email: vitaly.ostanin@gmail.com\
 github: https://github.com/VitalyOstanin/
 
-Date of birth: October 24, 1979\
-Location: Russia, Saint Petersburg\
-Remote work only
+Date of birth: October 24, 1979.\
+Location: Saint Petersburg, Russia.\
+Not open to relocation.\
+Work format: remote preferred, hybrid negotiable.
 
 ## Professional positioning
 1. Senior Backend Developer (Node.js);
 2. Tech Lead.
 
-## Notable Open Source Projects
-- **MCP Servers Ecosystem**: Created multiple Model Context Protocol servers for AI integration:
-  - **YouTrack MCP Server**: Comprehensive issue management and reporting integration
-  - **MongoDB MCP Server**: Full-featured database integration with safety modes
-  - **PostgreSQL MCP Server**: Database operations and schema analysis
-  - **Chrome Debugger Protocol MCP**: Advanced Node.js debugging through DevTools
-- **Markdown Org Extract**: Rust-based tool for organizing Markdown content inspired by Org Mode philosophy
+## Tech stack
+- **Primary languages**: TypeScript, JavaScript (Node.js);
+- **Secondary languages** (read and modify with AI assistance): Python, Rust;
+- **Backend frameworks**: NestJS;
+- **Databases**: PostgreSQL, MongoDB;
+- **Caching and messaging**: Redis, RabbitMQ, Kafka, NATS, pg-boss;
+- **Infrastructure**: Kubernetes (including Yandex Cloud Managed Kubernetes), Docker, Podman, Buildah, Helm, GitLab CI/CD, Harbor, Linux;
+- **Observability**: ELK, Grafana, Loki, Sentry;
+- **AI/LLM in development**: Anthropic Claude, OpenAI, Qwen, DeepSeek; API integration; own MCP servers;
+- **Testing**: unit (Vitest, Jest), integration, E2E (supertest), load (k6).
+
+## Open Source
+- [mcp-chrome-debugger-protocol](https://github.com/VitalyOstanin/mcp-chrome-debugger-protocol) — MCP server for Node.js debugging via Chrome DevTools Protocol;
+- [youtrack-mcp](https://github.com/VitalyOstanin/youtrack-mcp) — MCP server for YouTrack issue management and reporting;
+- [mongodb-mcp](https://github.com/VitalyOstanin/mongodb-mcp) — MCP server for MongoDB with read-only mode and streaming export;
+- [postgres-mcp](https://github.com/VitalyOstanin/postgres-mcp) — MCP server for PostgreSQL operations and schema analysis;
+- [markdown-org-extract](https://github.com/VitalyOstanin/markdown-org-extract) — Rust tool for organizing Markdown content in Org Mode style;
+- [eslint-prefer-de-morgan-law](https://github.com/VitalyOstanin/eslint-prefer-de-morgan-law) — ESLint rule for applying De Morgan's law;
+- [tg-export](https://github.com/VitalyOstanin/tg-export) — Telegram data exporter to local disk with flexible configuration (Python).
 
 ## Executive summary
-25+ years in IT with 13+ years of Node.js expertise.\
-Specialization: microservices architecture and development, enterprise systems integration, task and event queues, database design and optimization, high-load services.\
-**AI Integration Expert**: Advanced experience with AI agents (Anthropic Claude, OpenAI, Qwen, DeepSeek), practical implementation in development and testing workflows, extensive team training on AI adoption.\
-Team leadership, mentoring, development process organization, incident analysis and continuous improvement.\
-Hands-on Node.js development focused on API design, resilient queues, and service observability.
+25+ years in IT, 13+ years on Node.js.\
+Architecture and development of backend microservices, enterprise systems integration, task and event queues, database design and optimization, high-load services.\
+Team leadership, mentoring, development process organization, incident analysis.\
+Integration of AI assistants into development and testing workflows; training teams on practical AI adoption.
 
 ## Professional experience
 
+### Contract work (NDA)
+1. Period: March 2026 — April 2026 (2 months);
+2. Role: Backend Developer;
+3. Stack: Node.js, TypeScript, PostgreSQL;
+4. Results:
+   - **PostgreSQL-based financial core**: designed and implemented core business entities and operations for deposits, accruals, and payouts. The project was not finished, but the core was delivered.
+
 ### Finance.Analytics.News LLC
-1. Period: June 2024 — Present;
+1. Period: June 2024 — February 2026 (1 year 9 months);
 2. Industry: Finance;
 3. Role: Tech Lead / Senior Backend Developer;
-4. Key responsibilities and achievements: 
-   - System architecture design and team leadership
-   - **AI Integration Leadership**: Implemented AI agents for automated development and testing workflows
-   - **Team AI Training**: Conducted comprehensive training programs on practical AI adoption for development teams
-   - Advanced usage of multiple AI models (Anthropic Claude, OpenAI, Qwen, DeepSeek) in production environments
-   - Microservices development and enterprise system integration
+4. Stack: Node.js, TypeScript, NestJS, PostgreSQL, MongoDB, Redis, pg-boss, Kubernetes (Yandex Cloud), GitLab CI/CD, Helm;
+5. Key results:
+   - **Performance optimization**: 50–100× RPS growth on bottleneck endpoints by designing a 4-tier caching system: in-flight Promise cache (collapsing concurrent identical requests into a single one) → in-memory (LRU/TTL) → Redis → database;
+   - **Payment and CRM integrations**: CloudPayments (payment processing and conditional receipt generation per Russian 54-FZ), T-Bank, Robokassa, amoCRM (leads, deals, funnels);
+   - **Technical debt reduction**: fully decommissioned 14 services with unmaintainable code, replacing them with 4 new services on a supported stack;
+   - **Infrastructure stabilization**: resolved a critical service-cluster connectivity bug in an in-house discovery node, closed a year-long blocker around migrating the discovery node into the shared production cluster;
+   - **CI/CD and infrastructure**: deployed an additional environment on Yandex Cloud Managed Kubernetes (~30 legacy Node.js microservices); wrote and ported Helm charts for all services; migrated services from the old GitLab to the new one; built a fast and secure GitLab Runner (unprivileged Podman + Buildah + Harbor); set up build + deploy-to-Kubernetes pipelines; implemented building with an internal library via SSH→HTTPS transport substitution, pinning versions to arbitrary git refs without storing keys in GitLab;
+   - **Cost optimization**: offloaded workloads from two additional data centers (DigitalOcean, Hetzner), prepared a plan to drop Cloudflare;
+   - **Testing**: built testing infrastructure across all levels — unit (Vitest/Jest), integration, E2E (supertest), load (k6); implemented a production memory-leak debugging mechanism;
+   - **AI in the development process**: rolled out AI assistants via API (Claude Code on Sonnet 4, OpenAI Codex on GPT-5, VS Code Cline) for the team; trained backend and frontend engineers on Kubernetes and Node.js debugging inside it; participated in hiring (closed backend and DevOps positions);
+   - **Open Source as a byproduct**: built the Node.js debugging MCP server ([mcp-chrome-debugger-protocol](https://github.com/VitalyOstanin/mcp-chrome-debugger-protocol)).
 
-### Digital Technologies and Platforms — Lead Expert
+### Digital Technologies and Platforms
 1. Period: November 2022 — April 2024 (1 year 6 months);
 2. Location: Moscow;
-3. Industry: Information technology, system integration, internet;
-4. Role: Lead Expert;
-5. Responsibilities:
-   1. Design and development of new functionality;
-   2. Support and enhancement of existing functionality;
-   3. IT consulting;
-   4. Knowledge sharing and employee training.
+3. Role: Lead Expert;
+4. Stack: Node.js, TypeScript;
+5. Results:
+   - Design and development of new backend service functionality;
+   - Support and enhancement of existing services, code review;
+   - IT consulting, knowledge sharing, employee training.
 
-### Mati.io — Software Engineer
+### Mati.io
 1. Period: November 2020 — February 2022 (1 year 4 months);
-2. Industry: Information technology, system integration, internet;
-3. Profile: Software development;
-4. Role: Software Engineer;
-5. Responsibilities:
-   1. Core system development participation;
-   2. Architectural problem solving as part of architecture council;
-   3. Incident analysis and resilience improvement;
-   4. Task queue implementation for background system activities;
-   5. User verification process composition;
-   6. Tech stack: Node.js, RabbitMQ, MongoDB, PostgreSQL, Redis, ELK, Docker.
+2. Role: Software Engineer;
+3. Stack: Node.js, RabbitMQ, MongoDB, PostgreSQL, Redis, ELK, Docker;
+4. Results:
+   - Participated in core system development and solved architectural problems as part of the architecture council;
+   - Introduced task queues (RabbitMQ) for background processing;
+   - Implemented user verification processes;
+   - Analyzed production incidents and improved system resilience.
 
-### EPAM Systems Inc. (Russia) — Lead Software Engineer
+### EPAM Systems
 1. Period: July 2020 — November 2020 (5 months);
-2. Industry: Information technology, system integration, internet;
-3. Role: Lead Software Engineer;
-4. Responsibilities:
-   1. Technical analysis for Node.js API creation;
-   2. Data visualization solution preparation.
+2. Role: Lead Software Engineer;
+3. Stack: Node.js;
+4. Results:
+   - Technical analysis and design of Node.js APIs;
+   - Prepared data visualization solutions.
 
-### Draewil — Software Engineer
+### Draewil
 1. Period: April 2018 — July 2020 (2 years 4 months);
-2. Industry: Information technology, system integration, internet;
-3. Profile: Software development;
-4. Role: Software Engineer;
-5. Responsibilities:
-   1. Node.js microservices development and support;
-   2. MongoDB data structure design;
-   3. Logistics algorithm implementation;
-   4. Task system and incident monitoring creation;
-   5. Additional tech stack: RabbitMQ, Redis, ELK.
+2. Role: Software Engineer;
+3. Stack: Node.js, MongoDB, RabbitMQ, Redis, ELK;
+4. Results:
+   - Developed and maintained Node.js microservices;
+   - Designed MongoDB data structures;
+   - Implemented logistics algorithms;
+   - Built a background-task system and incident monitoring.
 
-### Sota Systems — Software Engineer
+### Sota Systems
 1. Period: January 2017 — March 2018 (1 year 3 months);
 2. Role: Software Engineer;
-3. Responsibilities:
-   1. Node.js microservices development and support;
-   2. Additional tech stack: PostgreSQL, ActiveMQ.
+3. Stack: Node.js, PostgreSQL, ActiveMQ;
+4. Results:
+   - Developed and maintained Node.js microservices.
 
-### YuMoney — Deputy Head of Web Interfaces Department
+### YuMoney
 1. Period: February 2009 — January 2017 (8 years);
-2. Industry: Internet company (payment systems and web services);
-3. Profile: Software development;
-4. Role: Deputy Head of Web Interfaces Department;
-5. Responsibilities:
-   1. Node.js framework development;
-   2. Migration from legacy framework;
-   3. Development process organization participation.
+2. Industry: Payment systems and web services;
+3. Role: Deputy Head of Web Interfaces Department;
+4. Stack: Node.js;
+5. Results:
+   - Developed a Node.js framework;
+   - Migrated product teams from the legacy framework;
+   - Participated in development process organization.
 
-### ALT Linux — Software Developer
+### ALT Linux
 1. Period: January 2007 — February 2009 (2 years 2 months);
 2. Role: Software Developer;
-3. Responsibilities:
-   1. RPM package maintenance (Jabber server, XML format family);
-   2. DocBook documentation support.
+3. Results:
+   - RPM package maintenance (Jabber server, XML format family);
+   - DocBook documentation support.
 
-### Vzlet Group — Network Administrator
+### Vzlet Group
 1. Period: January 2000 — January 2007 (7 years 1 month);
-2. Profile: Electronic computing, optical, control and measuring equipment, radio electronics, automation;
-3. Role: Network Administrator;
-4. Responsibilities:
-   1. Heterogeneous network configuration;
-   2. LDAP authentication, Samba, Subversion.
+2. Role: Network Administrator;
+3. Results:
+   - Heterogeneous network configuration;
+   - LDAP authentication, Samba, Subversion.
 
 ## Education
 1. Level: Higher education;
@@ -126,17 +143,14 @@ Hands-on Node.js development focused on API design, resilient queues, and servic
 
 ## Languages
 1. Russian — Native;
-2. English — B2+.
+2. English — B2.
 
 ## Core competencies
-1. Technologies: Node.js, TypeScript, ES6, Linux, Kubernetes;
-2. Databases: MongoDB, PostgreSQL, Redis;
-3. Integration and queues: RabbitMQ, pg-boss;
-4. Observability: ELK, Grafana, Loki, Sentry;
-5. **AI Integration**: Advanced usage of AI agent APIs (Anthropic Claude, OpenAI, Qwen, DeepSeek);
-6. **AI Agents**: Practical application in development and testing workflows, team training on AI adoption;
-7. Team collaboration: colleague training, code review, knowledge sharing.
-
-## Additional information
-Experienced professional with broad expertise: Node.js, databases, TCP/IP networking understanding, distributed systems interaction, task and event processing.\
-Ready to make technological decisions, take responsibility for architecture and implementation quality, develop team and development processes.
+1. **Backend**: Node.js, TypeScript, NestJS, API design, multi-tier caching (Redis), queues (RabbitMQ, Kafka, NATS, pg-boss);
+2. **Databases**: PostgreSQL (including transactional financial workloads), MongoDB;
+3. **Infrastructure**: Kubernetes, Docker, Podman, Buildah, Helm, GitLab CI/CD, Harbor, Linux;
+4. **Observability**: ELK, Grafana, Loki, Sentry;
+5. **Integrations**: payment systems (CloudPayments, T-Bank, Robokassa), Russian 54-FZ fiscal receipts, amoCRM;
+6. **AI in development**: AI assistant integration (Anthropic Claude, OpenAI, Qwen, DeepSeek) via APIs; own MCP servers; rolling out AI assistants into team workflows;
+7. **Testing**: unit (Vitest, Jest), integration, E2E (supertest), load (k6); production memory-leak debugging;
+8. **Soft skills**: team leadership, mentoring, hiring, development and deployment process organization.
