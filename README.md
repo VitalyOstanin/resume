@@ -31,14 +31,18 @@ github: https://github.com/VitalyOstanin/
 - [youtrack-mcp](https://github.com/VitalyOstanin/youtrack-mcp) — MCP-сервер для управления задачами и отчётности в YouTrack;
 - [mongodb-mcp](https://github.com/VitalyOstanin/mongodb-mcp) — MCP-сервер для MongoDB с режимом read-only и потоковым экспортом;
 - [postgres-mcp](https://github.com/VitalyOstanin/postgres-mcp) — MCP-сервер для операций с PostgreSQL и анализа схем;
+- [sentry-mcp](https://github.com/VitalyOstanin/sentry-mcp) — MCP-сервер для Sentry: организации, проекты, запросы по issues с фильтрацией и пагинацией;
+- [gitlab-mcp](https://github.com/VitalyOstanin/gitlab-mcp) — MCP-сервер для GitLab: проекты, merge requests с диффами и поиском, теги с подбором следующей SemVer-версии;
 - [markdown-org-extract](https://github.com/VitalyOstanin/markdown-org-extract) — инструмент на Rust для организации Markdown-контента в стиле Org Mode;
-- [eslint-prefer-de-morgan-law](https://github.com/VitalyOstanin/eslint-prefer-de-morgan-law) — ESLint-правило для применения закона де Моргана;
-- [tg-export](https://github.com/VitalyOstanin/tg-export) — экспорт данных из Telegram на локальный диск с гибкой настройкой (Python).
+- [markdown-org-vscode](https://github.com/VitalyOstanin/markdown-org-vscode) — расширение VS Code для работы с markdown-org;
+- [tg-export](https://github.com/VitalyOstanin/tg-export) — экспорт данных из Telegram на локальный диск с гибкой настройкой (Python);
+- [claude-dir-settings](https://github.com/VitalyOstanin/claude-dir-settings) — настройки Claude Code, привязанные к каталогу: `.claude-dir-settings.yaml` ищется вверх по дереву каталогов.
 
 ## Краткое резюме
 Более 25 лет в ИТ, более 13 лет на Node.js.\
 Архитектура и разработка backend-микросервисов, интеграция корпоративных систем, очереди задач и событий, проектирование и оптимизация баз данных, высоконагруженные сервисы.\
 Руководство командой, наставничество, организация процессов разработки, анализ инцидентов.\
+Удержание контекста крупных проектов на длительной перспективе; ориентирование в предметной области бизнеса (финтех, платежи, фискализация, CRM-воронки, антифрод); решение сложных и запущенных задач.\
 Интеграция AI-ассистентов в процессы разработки и тестирования; обучение команд работе с AI-агентами.
 
 ## Опыт работы
@@ -57,7 +61,7 @@ github: https://github.com/VitalyOstanin/
 4. Стек: Node.js, TypeScript, NestJS, PostgreSQL, MongoDB, Redis, pg-boss, Kubernetes (Yandex Cloud), GitLab CI/CD, Helm;
 5. Ключевые результаты:
    - **Оптимизация производительности**: на проблемных endpoints рост RPS в 50–100 раз за счёт спроектированной 4-уровневой системы кэширования: кэш in-flight Promise (схлопывание одновременных одинаковых запросов в один) → in-memory (LRU/TTL) → Redis → БД;
-   - **Интеграции с платёжными системами и CRM**: CloudPayments (приём платежей и условное формирование чеков по 54-ФЗ), T-Bank, Robokassa, amoCRM (лиды, сделки, воронки);
+   - **Восстановление платежей и подключение новых интеграций**: восстановил неработавший приём платежей и условное формирование чеков по 54-ФЗ (CloudPayments) — запущенная задача, унаследованная от предыдущей команды; подключил пул новых внешних систем — платёжные провайдеры (T-Bank, Robokassa), антифрод-капча (Yandex SmartCaptcha), CRM (amoCRM — лиды, сделки, воронки);
    - **Сокращение технического долга**: окончательно вывел из эксплуатации 14 сервисов с неподдерживаемым кодом, заменив их на 4 новых сервиса с поддерживаемым стеком;
    - **Стабилизация инфраструктуры**: устранил критическую ошибку связности кластера сервисов (самописный discovery-узел), закрыл годовую проблему с переносом discovery-узла в общий прод-кластер;
    - **CI/CD и инфраструктура**: развернул дополнительный стенд в Yandex Cloud Managed Kubernetes (~30 унаследованных Node.js-микросервисов); написал и портировал Helm-чарты для всех сервисов; перенёс сервисы со старого GitLab на новый; создал безопасный и быстрый GitLab Runner (unprivileged Podman + Buildah + Harbor); настроил пайплайны build + deploy в Kubernetes; реализовал сборку с внутренней библиотекой через подмену SSH→HTTPS и фиксацией версии по произвольному git ref без хранения ключей в GitLab;
@@ -154,4 +158,4 @@ github: https://github.com/VitalyOstanin/
 5. **Интеграции**: платёжные системы (CloudPayments, T-Bank, Robokassa), 54-ФЗ, amoCRM;
 6. **AI в разработке**: интеграция AI-ассистентов (Anthropic Claude, OpenAI, Qwen, DeepSeek) через API; собственные MCP-серверы; внедрение AI-ассистентов в рабочий процесс команды;
 7. **Тестирование**: unit (Vitest, Jest), integration, E2E (supertest), нагрузочное (k6); отладка утечек памяти в production;
-8. **Soft skills**: руководство командой, наставничество, найм, организация процессов разработки и деплоя.
+8. **Soft skills**: руководство командой, наставничество, найм, организация процессов разработки и деплоя; удержание контекста крупного проекта на длительной перспективе; ориентирование в предметной области бизнеса (финтех, платежи, фискализация по 54-ФЗ, CRM-воронки, антифрод); решение сложных и запущенных задач.

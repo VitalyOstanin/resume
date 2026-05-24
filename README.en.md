@@ -31,14 +31,18 @@ Work format: remote preferred, hybrid negotiable.
 - [youtrack-mcp](https://github.com/VitalyOstanin/youtrack-mcp) — MCP server for YouTrack issue management and reporting;
 - [mongodb-mcp](https://github.com/VitalyOstanin/mongodb-mcp) — MCP server for MongoDB with read-only mode and streaming export;
 - [postgres-mcp](https://github.com/VitalyOstanin/postgres-mcp) — MCP server for PostgreSQL operations and schema analysis;
+- [sentry-mcp](https://github.com/VitalyOstanin/sentry-mcp) — MCP server for Sentry: organizations and projects, issues with filtering and pagination;
+- [gitlab-mcp](https://github.com/VitalyOstanin/gitlab-mcp) — MCP server for GitLab: projects, merge requests with diffs and search, tags with SemVer next-release;
 - [markdown-org-extract](https://github.com/VitalyOstanin/markdown-org-extract) — Rust tool for organizing Markdown content in Org Mode style;
-- [eslint-prefer-de-morgan-law](https://github.com/VitalyOstanin/eslint-prefer-de-morgan-law) — ESLint rule for applying De Morgan's law;
-- [tg-export](https://github.com/VitalyOstanin/tg-export) — Telegram data exporter to local disk with flexible configuration (Python).
+- [markdown-org-vscode](https://github.com/VitalyOstanin/markdown-org-vscode) — VS Code extension for markdown-org;
+- [tg-export](https://github.com/VitalyOstanin/tg-export) — Telegram data exporter to local disk with flexible configuration (Python);
+- [claude-dir-settings](https://github.com/VitalyOstanin/claude-dir-settings) — per-directory Claude Code settings: `.claude-dir-settings.yaml` discovered up the directory tree.
 
 ## Executive summary
 25+ years in IT, 13+ years on Node.js.\
 Architecture and development of backend microservices, enterprise systems integration, task and event queues, database design and optimization, high-load services.\
 Team leadership, mentoring, development process organization, incident analysis.\
+Long-term retention of project context; grounding in business domain (fintech, payments, fiscal receipts, CRM funnels, anti-fraud); solving complex and neglected tasks.\
 Integration of AI assistants into development and testing workflows; training teams on practical AI adoption.
 
 ## Professional experience
@@ -57,7 +61,7 @@ Integration of AI assistants into development and testing workflows; training te
 4. Stack: Node.js, TypeScript, NestJS, PostgreSQL, MongoDB, Redis, pg-boss, Kubernetes (Yandex Cloud), GitLab CI/CD, Helm;
 5. Key results:
    - **Performance optimization**: 50–100× RPS growth on bottleneck endpoints by designing a 4-tier caching system: in-flight Promise cache (collapsing concurrent identical requests into a single one) → in-memory (LRU/TTL) → Redis → database;
-   - **Payment and CRM integrations**: CloudPayments (payment processing and conditional receipt generation per Russian 54-FZ), T-Bank, Robokassa, amoCRM (leads, deals, funnels);
+   - **Payment recovery and new integrations**: restored broken payment processing and conditional 54-FZ receipt generation (CloudPayments) — a neglected task inherited from the previous team; rolled out a batch of new external integrations — payment providers (T-Bank, Robokassa), anti-fraud CAPTCHA (Yandex SmartCaptcha), CRM (amoCRM — leads, deals, funnels);
    - **Technical debt reduction**: fully decommissioned 14 services with unmaintainable code, replacing them with 4 new services on a supported stack;
    - **Infrastructure stabilization**: resolved a critical service-cluster connectivity bug in an in-house discovery node, closed a year-long blocker around migrating the discovery node into the shared production cluster;
    - **CI/CD and infrastructure**: deployed an additional environment on Yandex Cloud Managed Kubernetes (~30 legacy Node.js microservices); wrote and ported Helm charts for all services; migrated services from the old GitLab to the new one; built a fast and secure GitLab Runner (unprivileged Podman + Buildah + Harbor); set up build + deploy-to-Kubernetes pipelines; implemented building with an internal library via SSH→HTTPS transport substitution, pinning versions to arbitrary git refs without storing keys in GitLab;
@@ -153,4 +157,4 @@ Integration of AI assistants into development and testing workflows; training te
 5. **Integrations**: payment systems (CloudPayments, T-Bank, Robokassa), Russian 54-FZ fiscal receipts, amoCRM;
 6. **AI in development**: AI assistant integration (Anthropic Claude, OpenAI, Qwen, DeepSeek) via APIs; own MCP servers; rolling out AI assistants into team workflows;
 7. **Testing**: unit (Vitest, Jest), integration, E2E (supertest), load (k6); production memory-leak debugging;
-8. **Soft skills**: team leadership, mentoring, hiring, development and deployment process organization.
+8. **Soft skills**: team leadership, mentoring, hiring, development and deployment process organization; long-term retention of project context; strong grounding in business domain (fintech, payments, 54-FZ fiscal receipts, CRM funnels, anti-fraud); solving complex and neglected tasks.
