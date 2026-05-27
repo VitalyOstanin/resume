@@ -45,6 +45,14 @@ Team leadership, mentoring, development process organization, incident analysis.
 Long-term retention of project context; grounding in business domain (fintech, payments, fiscal receipts, CRM funnels, anti-fraud); solving complex and neglected tasks.\
 Integration of AI assistants into development and testing workflows; training teams on practical AI adoption.
 
+## Strengths
+- **Neglected tasks and legacy**: I restore system behavior without documentation — from code, logs, database state, and production behavior. I push tasks across multiple iterations to a production-ready state instead of dropping them midway. Example: restoring broken payment processing and conditional 54-FZ receipt issuance (CloudPayments).
+- **Complex integrations**: preventive design — retry, idempotency, edge cases, and observability from day one. Example: a batch of new integrations rolled to production (T-Bank, Robokassa, Yandex SmartCaptcha, amoCRM).
+- **Architecture**: I design from invariants (immutable ledger, append-only, double-entry); build in transactional consistency and idempotency from day one; separate the hot path from heavy processing; pick the tool to match the task. Example: PostgreSQL-based financial core; a 4-tier caching system with 50–100× RPS growth.
+- **Leadership**: I systematize knowledge into a base (foundation: [infostream](https://github.com/VitalyOstanin/infostream)); set up working development, testing, and deployment processes; on hiring, I distinguish people who actually deliver from people who just talk well.
+- **AI tooling**: I roll out AI assistants into team workflows; build my own harnesses (Claude Code plugins + public MCP servers); integrate with the corporate stack. Pragmatic approach — engineer's tool, not a replacement for thinking.
+- **Project context and fintech domain**: I retain context of a large project over the long haul; I'm well-grounded in payments, 54-FZ fiscal receipts, CRM funnels, and anti-fraud.
+
 ## Professional experience
 
 ### Contract work (NDA)
